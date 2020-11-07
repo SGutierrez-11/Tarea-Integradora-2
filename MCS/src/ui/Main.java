@@ -28,6 +28,12 @@ public class Main{
 		
 	}
 	
+	/**
+	*this method is for show the menu.
+	*<b> pre: </b>: Show the menu to the people.
+	*@return int return the option.
+	*/
+	
 	public int showMenu(){
 		
 		int option=0;
@@ -46,6 +52,12 @@ public class Main{
 		
 		return option;
 	}
+	
+	/**
+	This method put the option that the user choose in the menu.
+	*@param option is the option for the selection of the menu.
+	*/
+	
 	
 	public void executeOption(int option){
 		
@@ -91,6 +103,11 @@ public class Main{
 		
 	}
 	
+	/**
+	*<b> pre: </b>: add a new user for the program.
+	*/
+	
+	
 		public void addUser(){
 
         System.out.println("Ahora, ingresa los siguientes datos... ");
@@ -112,6 +129,11 @@ public class Main{
 				
     }
 		
+		/**
+		*<b> pre: </b>: add a new playlist for the program.
+		*/
+		
+		
 		    public void addPlaylist(){
 
         System.out.println("Ahora, ingrese lo siguiente...");
@@ -127,7 +149,12 @@ public class Main{
         mcs.addPlaylist(namePlaylist, duration);
     }
 	
-	
+		/**
+		*<b> pre: </b>: add a new song for the program.
+		*<b> pos: </b>: Choose the user that is choosing the song and select the genre.
+		*/
+		
+		
 		public void addSong(){
 
         System.out.println("Ahora bien, ingresa los siguientes campos...");
@@ -148,6 +175,10 @@ public class Main{
         String genre = chooseGenre();
         mcs.addSong(pos, title, artist, release, duration, genre);
     }
+		
+		/**
+		*<b> pre: </b>: choose a genre for the program.
+		*/
 
     public String chooseGenre(){
         String genre = "";
@@ -185,7 +216,12 @@ public class Main{
         }
         return genre;
     }
-
+		
+		/**
+		*<b> pre: </b>: select the user who is adding.
+		*/
+		
+		
 		public int whoUser(){
 			
         System.out.println("Seleccione el usuario que esta usando: ");
@@ -198,10 +234,18 @@ public class Main{
         
 				return pos;
     }
+		
+		/**
+		*<b> pre: </b>: show the list of the users.
+		*/
 
 		public void showUserList(){
         System.out.print(mcs.showUsers());
     }
+		
+		/**
+		*<b> pre: </b>: show the list of the songs.
+		*/
 		
 		public void showSongList(){
         System.out.print(mcs.showSongs());
